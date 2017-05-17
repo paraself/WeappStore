@@ -1,5 +1,6 @@
 # WeappStore
-An super lightweight state management tool for Weapp. 一个超轻量级的微信小程序状态管理库
+ 一个超轻量级的微信小程序状态管理库
+An super lightweight state management tool for Weapp.
 
 Redux太复杂了，有没有！
 好吧，其实我只想同步一下全局变量所绑定的视图而已。那么试试这个轻量的状态管理工具把。
