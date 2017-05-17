@@ -1,5 +1,5 @@
 # WeappStore
- 一个超轻量级的微信小程序状态管理库
+ 一个超轻量级的微信小程序状态管理库  
 An super lightweight state management tool for Weapp.
 
 Redux太复杂了，有没有！
