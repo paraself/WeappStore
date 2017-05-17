@@ -34,6 +34,11 @@ Page({
   }
 })
 ```
+```html
+<view class="Page">
+ Username: {{userName}}
+</view>
+```
 4. 好了，现在如果需要改变全局状态变量的时候，就可以这么写啦：
 ```javascript
   app.$store.setState('userName', 'Alice')
