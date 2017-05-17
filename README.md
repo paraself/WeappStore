@@ -41,7 +41,7 @@ Page({
 再重复一下，只有三个api
 ```javascript
 // 创建store实例
-new WeappStore(stateObject)
+var weappStore = new WeappStore(stateObject)
 // 将全局状态变量绑定到页面
 weappStore.link(stateName, page)
 // 更新全局变量
