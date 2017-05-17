@@ -38,7 +38,8 @@ Page({
 ```javascript
   app.$store.setState('userName', 'Alice')
 ```
-所有绑定这个全局状态变量的页面，都会自动更新啦。 
+所有绑定这个全局状态变量的页面，都会自动更新啦。
+
 5. 同时在页面的wxml也可以直接这么写
 ```javascript
 <view data-state=" userName: {{someVariable}} " catchtap="setState" />
