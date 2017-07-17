@@ -51,18 +51,28 @@ Page({
 ```
 因为在将页面link的时候，就自动为页面添加了setState方法，同时约定，data-state可以用于传递state的值。但是这里有一个限制，就是data-state只能是下面几种形式：
 ```javascript
-data-state=" userName: Alice "
 
+data-state=" userName: Alice "
+// 事件函数里获得的state对象为
 {
  userName: 'Alice'
 }
 
 data-state=" userNumber: 15 "
+// 事件函数里获得的state对象为
 {
  userNumber: 15
 }
 
 date-state=" userBool: false"
+// 事件函数里获得的state对象为
+{
+ userBool: false
+}
+
+this.data.myVar = false
+date-state=" userBool: {{myVar}}"
+// 事件函数里获得的state对象为
 {
  userBool: false
 }
@@ -75,6 +85,7 @@ date-state=" {{userBool: myBoolVariable}}"
 date-state=" userName: {{myNameVariable}}, userEmail: {{email}}"
 ```
 目前在data-state里，仅支持一对键-值，如果需要设置更多的，那么可以在page里在写一个方法，在方法里再去设置state。
+另外注意一点，在navigator上，不要用catchtap去绑定任何的事件，因为，页面跳转之后执行的新的页面的生命周期函数，和catchtap绑定的事件，是并行的。。。所以这是个坑，要注意。尽量用view + catchtap的方式去写。
 
 
 # 很简单！有没有！
